@@ -10,21 +10,21 @@ function init() {
 
 // Envoi d'une requête POST à l'API de notre serveur
 async function sendRequest() {
-    // On récupère la valeur du prompt
-    const inputElement = document.querySelector('input');
+    const inputElement = document.querySelector('input#input');
+    const temperatureElement = document.querySelector('input#temperature');
+    const maxTokensElement = document.querySelector('input#maxTokens');
 
     const prompt = inputElement.value;
-    // si le prompt est vide on quitte la fonction
+    const temperature = temperatureElement.value;
+    const maxTokens = maxTokensElement.value;
+
     if (prompt === '') return;
 
-    // On envoie le contenu du prompt dans un FormData (eq. formulaires multipart)
     const promptData = new FormData();
     promptData.append('prompt', prompt);
+    promptData.append('temperature', temperature);
+    promptData.append('max_tokens', maxTokens);
 
-    // Envoi de la requête POST par fetch, avec le FormData dans la propriété body
-    // côté serveur on récupèrera dans req.body.prompt la valeur du prompt,
-    // avec nodeJS on utilisera le module multer pour récupérer les donénes 
-    // multer gère les données multipart/form-data
     const response = await fetch(endpointURL, {
         method: 'POST',
         body: promptData
@@ -46,4 +46,6 @@ async function sendRequest() {
 
     // On remet à zéro le champ input
     inputElement.value = '';
+
+
 }

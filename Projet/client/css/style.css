@@ -115,3 +115,30 @@ nav {
     overflow: hidden;
     box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
 }
+
+.delete-history-item {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: transparent; /* Rend le fond transparent */
+    color: white;
+    border: none;
+    font-size: 16px; /* Ajustez selon la taille souhaitée pour la croix */
+    width: auto;
+    height: auto;
+    line-height: normal;
+    text-align: center;
+    padding: 0; /* Retirez le rembourrage si nécessaire */
+}
+
+/* Ajoutez ceci si vous voulez que la croix soit plus subtile */
+.delete-history-item:hover {
+    color: #f44336; /* Changez la couleur lors du survol */
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
