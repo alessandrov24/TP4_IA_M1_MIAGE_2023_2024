@@ -12,6 +12,13 @@ function init() {
     clearChatButton.onclick = clearChat;
 }
 
+// Fonction pour nettoyer la conversation
+function clearChat() {
+    const outputElement = document.querySelector('#output');
+    // Vide le contenu de la zone de sortie
+    outputElement.innerHTML = '';
+}
+
 // Envoi d'une requête POST à l'API de notre serveur
 async function sendRequest() {
     const inputElement = document.querySelector('input#input');
@@ -54,11 +61,4 @@ function displayMessage(message, sender) {
 
     // Insère le nouveau message au début du conteneur output
     outputElement.insertBefore(messageElement, outputElement.firstChild);
-}
-
-// Fonction pour effacer le chat
-function clearChat() {
-    const outputElement = document.querySelector('#output');
-    // Vide le contenu de la zone de sortie
-    outputElement.innerHTML = '';
 }

@@ -22,12 +22,12 @@ body {
 }
 
 .chat-display {
-    overflow-y: auto;
     padding: 10px;
     display: flex;
     flex-direction: column-reverse; /* Garde les nouveaux messages en haut, mais vous pouvez changer si besoin */
     justify-content: flex-end; /* Commence à remplir le conteneur depuis le bas */
-    max-height: 340px;
+    max-height: calc(100vh - 200px); /* Ajustez le 200px en fonction de la hauteur de vos autres éléments */
+    overflow-y: auto;
 }
 
 
@@ -118,40 +118,4 @@ body {
 .message.user {
     background-color: #888; /* Couleur de fond pour les messages de l'utilisateur */
     align-self: flex-end; /* Aligner les messages de l'utilisateur à droite */
-}
-
-.site-header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    height: 50px; /* Ajustez selon la taille de votre logo */
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #0056b3;
 }
