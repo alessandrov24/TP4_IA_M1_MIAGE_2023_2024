@@ -1,144 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+#chatbot-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    height: 400px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
 
-* {
+#chatbot-header {
+    background-color: #007bff;
     color: white;
-    font-family: 'Creepster', cursive;
-    font-family: 'Open Sans', sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #343541;
-    display: flex;
-}
-
-h1 {
-    font-size: 33px;
-    font-weight: 600;
-    padding: 200px 0;
-}
-
-.side-bar {
-    background-color: #202123;
-    width: 244px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    height: 100vh;
-    width: 100%;
-}
-
-.bottom-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.info {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 11px;
     padding: 10px;
+    text-align: center;
 }
 
-input {
+#chatbot-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chatbot-input {
     border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 100%;
-    font-size: 20px;
-    padding: 12px 15px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 54px 55px,
-        rgba(0, 0, 0, 0.05) 0 -12px 30px,
-        rgba(0, 0, 0, 0.05) 0 4px 6px,
-        rgba(0, 0, 0, 0.05) 0 12px 3px,
-        rgba(0, 0, 0, 0.09) 0 -3px 5px;
-}
-
-input:focus {
-    outline: none;
-}
-
-.input-container {
-    position:relative;
-    width: 100%;
-    max-width: 650px;
-}
-
-.input-container #submit {
-    position:absolute;
-    right: 20;
-    bottom: 15px;
-    cursor:pointer;
-}
-
-button {
-    border : solid 0.5px rgba(255, 255, 255, 0.5);
-    background-color: transparent;
-    border-radius: 5px;
-    padding:10px;
+    padding: 10px;
     margin: 10px;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
 
-nav {
-    border : solid 0.5px rgba(255, 255, 255, 0.5);
-    padding:10px;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-.history {
-    padding:10px;
-    margin: 10px;
-    display:flex;
-    flex-direction: column;
-    height:100%
-}
-
-.history p {
-    cursor:pointer;
-}
-
-.image-container {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
-}
-
-.delete-history-item {
-    margin-left: 10px;
-    cursor: pointer;
-    background-color: transparent; /* Rend le fond transparent */
+#chatbot-send {
+    background-color: #007bff;
     color: white;
     border: none;
-    font-size: 16px; /* Ajustez selon la taille souhaitée pour la croix */
-    width: auto;
-    height: auto;
-    line-height: normal;
-    text-align: center;
-    padding: 0; /* Retirez le rembourrage si nécessaire */
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
 }
 
-/* Ajoutez ceci si vous voulez que la croix soit plus subtile */
-.delete-history-item:hover {
-    color: #f44336; /* Changez la couleur lors du survol */
+#chatbot-send:hover {
+    background-color: #0056b3;
 }
-
-.history-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
