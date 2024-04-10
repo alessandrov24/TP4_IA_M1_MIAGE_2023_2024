@@ -1,23 +1,31 @@
 <html>
-
-<head>
-    <title>MiageGPT with Dall-E</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <!--
-        <script src="js/testRequestDavinCi.js"></script>
-        -->
+  <head>
+    <title>MiageGPT</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/sendRequestToServer.js"></script>
+  </head>
 
-</head>
-
-<body>
-    <div id="chatbot-container">
-        <div id="chatbot-header">Chatbot</div>
-        <div id="chatbot-messages"></div>
-        <input id="chatbot-input" type="text" placeholder="Posez votre question ici...">
-        <button id="chatbot-send">Envoyer</button>
+  <body>
+    <div class="chat-interface">
+        <div class="chat-header">
+            <span id="toggle-chat">✖</span>
+            <h2>Assistant Bot</h2>
+            <img src="assets/bot.png" alt="Logo Assistant Bot" class="chat-logo">   
+        </div>
+        <div id="output" class="chat-display">
+            <!-- Les messages du chat seront affichés ici -->
+        </div>
+    
+        <div class="user-input">
+            <div class="input-wrapper">
+                <input id="input" type="text" required placeholder="Tapez votre message ici..." />
+            </div>
+            <div class="button-wrapper">
+                <button id="send-button">Envoyer</button>
+                <button id="clear-chat">Nettoyer la conversation</button>
+            </div>
+        </div>
     </div>
-</body>
-
+  </body>
 </html>
