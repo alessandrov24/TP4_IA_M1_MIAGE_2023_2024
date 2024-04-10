@@ -119,3 +119,39 @@ body {
     background-color: #888; /* Couleur de fond pour les messages de l'utilisateur */
     align-self: flex-end; /* Aligner les messages de l'utilisateur à droite */
 }
+
+.site-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px; /* Ajustez selon la taille de votre logo */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
